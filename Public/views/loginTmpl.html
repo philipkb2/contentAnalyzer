@@ -1,0 +1,143 @@
+<!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-company-title" href="#">Content Analyzer</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-right">
+                    <button id="navbar-modal-btn" class="btn btn-primary btn-lg modal-login-launcher" data-toggle="modal" data-target="#login-modal">
+                        Login
+                    </button>
+                    <button id="navbar-modal-btn" class="btn btn-primary btn-lg modal-signup-launcher" data-toggle="modal" data-target="#signup-modal">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+<!-- MODAL: LOGIN -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header login_modal_header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title" id="myModalLabel">Login to Your Account</h3>
+                </div>
+                <div class="modal-body login-modal">
+                    <h4 class="modal-inner-header text-center">MySite is a content analysis site for journalists and bloggers. It's 100% free.</h4>
+                    <br/>
+                    <div class="clearfix"></div>
+                    <div id="login-icons-container">
+
+                        <div class="modal-body-left">
+                            <div class="modal-login-elements">
+                                <!-- EMAIL -->
+                                <div class="form-group">
+                                    <input type="text" ng-model="credentials.email" id="username" placeholder="Email address" value="" class="form-control login-field">
+                                    <i class="fa fa-user login-field-icon"></i>
+                                </div>
+                                <!-- PASSWORD -->
+                                <div class="form-group">
+                                    <input type="password" ng-model="credentials.password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+                                    <i class="fa fa-lock login-field-icon"></i>
+                                </div>
+                                <!-- LOGIN -->
+                                <a href ng-click="login()" class="btn btn-success modal-login-btn">
+                                    <p class="btn-title">Login</p>
+                                </a>
+                                <a href="" class="login-link text-center">Lost your password?</a>
+                            </div>
+                        </div>
+                        <!-- SOCIAL LOGINS -->
+                        <div class="modal-body-right">
+                                <div class="modal-social-icons">
+                                    <a href="" class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i><p class=btn-title>Log In with Facebook</p></a>
+                                    <a href="" class="btn btn-default twitter"><i class="fa fa-twitter modal-icons"></i><p class=btn-title>Log In with Twitter</p></a>
+                                    <!-- <a href="" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i><p class=btn-title>Log In with Google</p></a> -->
+                                    <a href="" class="btn btn-default linkedin"><i class="fa fa-linkedin modal-icons"></i><p class=btn-title>Log In with LinkedIn</p></a>
+                                </div>
+                        </div>
+
+                        <div id="center-line"> OR </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group modal-register-btn">
+                        <button class="btn btn-default" data-toggle="modal" data-target="#signup-modal"> Register as a New User</button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="modal-footer login_modal_footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- MODAL: SIGN UP -->
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
+                <div class="modal-header login_modal_header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title" id="myModalLabel">Create a New Account</h3>
+                </div>
+            
+                <div class="modal-body signup-modal">
+                    <h4 class="modal-inner-header text-center">MySite is a content analysis site for journalists and bloggers. It's 100% free.</h4>
+                    <br/>
+                    <div class="clearfix"></div>
+                    <div id="login-icons-container">
+
+                        <div class="modal-body-left">
+                            <div class="modal-login-elements">
+                                <!-- NAME -->
+                                <div class="form-group">
+                                    <input type="text" id="name" ng-model="newUser.name" placeholder="First & last name" value="" class="form-control login-field">
+                                    <i class="fa fa-user login-field-icon"></i>
+                                </div>
+                                <!-- EMAIL -->
+                                <div class="form-group">
+                                    <input type="text" id="email" ng-model="newUser.email" placeholder="Email address" value="" class="form-control login-field">
+                                    <i class="fa fa-envelope login-field-icon"></i>
+                                </div>
+                                <!-- PASSWORD -->
+                                <div class="form-group">
+                                    <input type="password" id="login-pass" ng-model="newUser.password" placeholder="Password" value="" class="form-control login-field">
+                                    <i class="fa fa-lock login-field-icon"></i>
+                                </div>
+                                <!-- REGISTER -->
+                                <a href ng-click="register()" class="btn btn-success modal-login-btn"><p class=btn-title>Create User & Login</p></a>
+                                <a href class="login-link text-center">Lost your password?</a>
+                            </div>
+                        </div>
+                        <!-- SOCIAL SIGNUPS -->
+                        <div class="modal-body-right">
+                                <div class="modal-social-icons">
+                                    <a href="" class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i><p class=btn-title>Sign Up with Facebook</p></a>
+                                    <a href="" class="btn btn-default twitter"><i class="fa fa-twitter modal-icons"></i><p class=btn-title>Sign Up with Twitter</p></a>
+                                    <!-- <a href="#" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i><p class=btn-title>Sign Up with Google</p></a> -->
+                                    <a href="" class="btn btn-default linkedin"><i class="fa fa-linkedin modal-icons"></i><p class=btn-title>Sign Up with LinkedIn</p></a>
+                                </div>
+                        </div>
+
+                        <div id="center-line"> OR </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="modal-footer login_modal_footer">
+                </div>
+            </div>
+        </div>
+    </div>
+

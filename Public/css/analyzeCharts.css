@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+text {
+    font: 12px sans-serif;
+}
+
+svg {
+    display: block;
+    float: left;
+}
+
+.results-chart {
+    display: inline-block !important;
+    float: left;
+    padding: 0 15px 0 0 !important;
+}
+
+.results-chart.col-sm-6.col-xs-12 {
+    padding: 0 !important;
+}
+
+.results-data-table {
+    /*top: 10px;*/
+    display: inline-block !important;
+    margin-left: 15px;
+    padding-right: 0 !important;
+}
+
+.results-data-table h2 {
+    font-weight: 700;
+}
+
+.results-data-table h3 {
+    font-weight: 700;
+}
+
+/*    .results-data-table-title {
+
+    }
+
+    .results-data-table-details {
+
+    }*/
+
+/*=================================
+====== POLITICAL PIE CHART ========
+=================================*/
+#piePolitical1 {
+    height: 480px !important;
+    width: 465px !important;
+}
+
+.nvd3.nv-pie.nv-chart-donut1 .nv-pie-title {
+    font-size: 40px;
+    opacity: 0.4;
+    fill: rgba(224, 116, 76, 0.91);
+}
+/*=================================
+========= TONE BAR CHART ==========
+=================================*/
+#chartTone1 {
+    height: 400px !important;
+    width: 500px !important;
+}
+
+.chartTone1 {
+    height: 400px !important;
+    width: 500px !important;
+    padding-left: 0 !important;
+}
+/*=================================
+======= EMOTION BAR CHART =========
+=================================*/
+#chartEmotion1 {
+    height: 400px !important;
+    width: 500px !important;
+}
+.chartEmotion1 {
+    height: 400px !important;
+    width: 500px !important;
+    padding-left: 0 !important;
+}
+/*=================================
+====== PERSONALITY BAR CHART ======
+=================================*/
+#chartPersonality1 {
+    height: 400px !important;
+    width: 500px !important;
+}
+.chartPersonality1 {
+    height: 400px !important;
+    width: 500px !important;
+    padding-left: 0 !important;
+}

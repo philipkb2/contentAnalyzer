@@ -1,0 +1,24 @@
+{
+  "name": "personal-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alchemy-api": "^1.3.2",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "indico.io": "^0.9.4",
+    "mongoose": "^4.4.16",
+    "needle": "^1.0.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "watson-developer-cloud": "^1.12.4"
+  }
+}

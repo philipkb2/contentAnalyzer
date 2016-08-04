@@ -1,0 +1,25 @@
+.home-main-container {
+	margin-top: 52px;
+}
+
+	.home-title-banner{
+		margin-top: 50px;
+		text-align: center;
+	}
+
+		.home-title-text {
+			font-size: 60px;
+			font-weight: 900;
+			color: #364150;
+			/*text-shadow: 1px 1px #fff; */
+		}
+
+	.home-title-under{
+		text-align: center;
+	}
+
+		.home-title-detail {
+			line-height: 135%;
+			font-weight: 525;
+			color: #364150;
+		}

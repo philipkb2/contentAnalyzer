@@ -1,0 +1,143 @@
+Personal Project:
+
+OBJECTIVE
+Measure current content against best-in-class
+Compare current writing to other posts
+
+STEPS
+0 - Login
+1 - Uploader                # 1
+2 - Backend DB
+3 - Retrieval/Logic
+4 - Table - Basic display   # 1
+5 - Add-on API data         *
+6 - Visualization           *
+7 - Refine
+
+FEATURES
+    WORDS
+        Total words - dial
+        Repeated words - chart
+        Word length (Avg, Total)
+        Uniqueness
+        Popularity
+        Type (Adj, Pronoun, etc)
+        Root (Latin)
+
+    SENTENCES
+        Total sentences
+        Type (questions, exclamations)
+        Uniqueness
+        Sentiment
+        Theme
+        N-Grams
+
+    PARAGRAPH
+        Sentiment
+        Leading questions
+        Structure
+        Map
+
+Great article: http://brnrd.me/social-sentiment-sentiment-analysis/
+
+API SOURCES:
+DatumBox
+https://indico.io/docs#batch
+    .sentimenthq
+    .personas
+    .emotion
+    **.analyzeText**
+    maybe .relevance if they pass in value(s) as the keyword to relate to
+    Split sentences https://indico.io/docs?node#text_splitting
+alchemyapi.com/api (https://github.com/AlchemyAPI/alchemyapi_node) (https://github.com/watson-developer-cloud/node-sdk)
+    Sentiment
+        Webpage = URLGetTextSentiment - http://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment&apikey=&url=&outputMode=json&showSourceText=1
+        Text = TextGetTextSentiment - http://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment&apikey=&text=&outputMode=jsonshowSourceText=1
+    Emotion (anger, disgust, fear, joy, and sadness; 0.0-1.0)
+        Webpage = URLGetEmotion - http://gateway-a.watsonplatform.net/calls/url/URLGetEmotion&apikey=&url=&outputMode=json&sourceText=cleaned_or_raw&showSourceText=1
+        Text = TextGetEmotion - http://gateway-a.watsonplatform.net/calls/text/TextGetEmotion&apikey=&text=&outputMode=json&showSourceText=1
+    Tone Analyzer
+        npm i --save watson-developer-cloud
+    Personality Insights
+        https://github.com/watson-developer-cloud/node-sdk/?cm_mc_uid=43663228727014624864711&cm_mc_sid_50200000=1462983776
+    Social analysis of like-topics
+        https://www.brandwatch.com/brandwatch-analytics/
+
+TABLES:
+smart-table http://plnkr.co/edit/OGq29V?p=preview
+not too good ---- Angular UI Grid http://ui-grid.info/docs/#/tutorial
+ng-table http://ng-table.com/
+
+_________________________________________
+https://developer.ibm.com/watson/blog/2015/07/16/ibm-watson-tone-analyzer-service-experimental-release-announcement/
+https://iksinc.wordpress.com/tag/indico/
+
+Great implementations:
+https://tone-analyzer-demo.mybluemix.net/?cm_mc_uid=43663228727014624864711&cm_mc_sid_50200000=1462983776
+http://inpulsify.com/ - http://devpost.com/software/vita-q3ljf6 - https://indico.io/gallery/
+http://www.analyzemywriting.com/index.html
+https://www.textrazor.com/demo (tables!)
+http://www.r-bloggers.com/everything-in-its-right-place-visualization-and-content-analysis-of-radiohead-lyrics/
+
+NPM Packages:
+https://www.npmjs.com/package/word-frequency-analyzer
+https://www.npmjs.com/package/keyword-count
+https://www.npmjs.com/package/woa
+maybe https://www.npmjs.com/package/sentiyapa
+    https://www.npmjs.com/package/schenkerian
+
+
+Login modal:
+http://stackoverflow.com/questions/28733762/modal-dialog-for-login-signup-for-an-angular-app
+
+Crazy detailed: http://provalisresearch.com/products/content-analysis-software/wordstat-features/
+
+Social Media Monitoring -- How It Works:
+Sentiment Analysis can be performed on text as short as one sentence, making it perfect for social
+media. Posts are analyzed individually to determine how people are talking about topics of interest (your
+brand, your products, events, public figures). The results can be aggregated to find trends and signals.
+    Personality Insights compliments Sentiment Analysis by providing insight into the people involved in
+the conversation. By studying the authors of social posts, you can answer questions such as “Are people who
+like our product outgoing?” and “What type of personality seems most likely to recommend our competitors?”
+
+
+
+
+FEATURES
+
+acronym	        Shows all the acronyms in your writing and highlights where they haven't been defined, or have been defined after the first occurrence, or have been defined multiple times..
+alliteration    Highlights alliterations in your writing. Alliterations are a linguistic tool used by some writers for effect..
+bully           Highlights bullying and vulgar language in your text..
+cliche          Scours your work for cliches and highlights them. Nobody likes to read a cliche so best to avoid them. Redundant expressions can also be removed as they say the same thing twice..
+complex         Highlights complex words in your writing. Words are broken down by number of syllables..
+consistency     Highlights inconsistency in your text. Picking up inconsistencies in your text can be one of the hardest editing tasks..
+corporate       Highlights uses of corporate wording that can be simplified to clarify your document..
+dialog          Highlights the dialogue tags in your text. Editors prefer minimal use of all dialogue tags (except for 'said')..
+diction         Provides a list of possible diction problems and suggestions on how you might revise them..
+dva             Highlights diction problems, vague and abstract words in your text..
+eloquence       Designed to help you develop your use of stylistic writing techniques such as alliteration, epistrophe, and hendiadys. The items in this report are not suggestions, just aids to help you along the way..
+grammar         Checks your text for grammar errors and potential word mis-use..
+grammarplus     Checks your text for grammar errors and potential word mis-use..
+homonym         Helps you check for incorrect word usage. Homonyms are words which sound alike yet are spelled differently. For example: there, their and they're or raw and roar..
+initial         Highlights the initial pronouns in your text. Repetitive use of initial pronouns can lead to boring text, e.g. He did this. He did that. He did another thing..
+nlp	            Our NLP Predicate Words report allows you to easily identify the key modality or representation system of a piece of text. If you are analyzing a document written by someone else then this will give you an idea of their preferred representational system. This may help you tailor your writing in order to build rapport. If you don't know the modality of your reader then try to use a balance of words from each modality. This will broaden the appeal of your writing..
+overused        Compares the frequency of commonly overused words in your text to published writing to give you an indication of where you may be over-using words..
+overusedonly    Compares the frequency of commonly overused words in your text to published writing to give you an indication of where you may be over-using words..
+overview        Gives you an overview of the key metrics for your document..
+pacing          Identifies the slower paced parts of your manuscript, such as introspection and backstory so you can spread them out. Try not to have too many slower paced paragraphs in a row as this can get boring..
+passive         Highlights areas where your writing style might be improved, such as use of passive and hidden verbs..
+phrases         Provides a summary of all the phrases that you have repeated in your writing. Try and cut down on repeats..
+plagiarism      Identifies parts of your text that occur in other documents. Scans millions of web-pages, books, and academic papers..
+plength         A visual representation of the paragraph lengths of your writing. Avoid writing more than five or six sentences in a paragraph. Also try to avoid too many short paragraphs..
+readability     Provides a series of readability measures for your text so you can determine if it is suitable for your intended audience..
+sentiment       Shows a histogram of the sentiment in your story so you can monitor large swings..
+sentimentwords  Highlights words that have a sentiment bias in your text, and grades them..
+slength         Shows a visual representation of the sentences lengths of your writing. Try and vary the sentence lengths to maintain the interest of the reader..
+ssentences      Shows sticky sentences in your writing. Sticky sentences slow your reader down; try to avoid them..
+structure       Highlights the key structure of a document such as sentences and paragraphs..
+thesaurus       Shows possible replacements for nouns, verbs, adjectives and adverbs..
+time            Highlights any temporal references in your text so you can check for inconsistency and view the time-line of your text..
+transition      Highlights the transitions in your report. Transitions help organize ideas. Writing that is short on transitions is often hard to follow. Non-fiction writing that has under 1 transition per 4 sentences tends to be less understandable..
+vague           Provides a list of words that may be considered vague or abstract. Consider strengthening them..
+wordcloud       Shows you a word cloud of the most commonly occuring words in your text..
+wordsphrases    Highlights any words and phrases that you have repeated within a short space of writing. Try and think of something else to say..

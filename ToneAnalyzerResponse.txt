@@ -1,0 +1,1001 @@
+{
+  "document_tone": {
+    "tone_categories": [
+      {
+        "tones": [
+          {
+            "score": 0.559194,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.938484,
+            "tone_id": "disgust",
+            "tone_name": "Disgust"
+          },
+          {
+            "score": 0.316427,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.022995,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.056501,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ],
+        "category_id": "emotion_tone",
+        "category_name": "Emotion Tone"
+      },
+      {
+        "tones": [
+          {
+            "score": 0.947,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.257,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ],
+        "category_id": "writing_tone",
+        "category_name": "Writing Tone"
+      },
+      {
+        "tones": [
+          {
+            "score": 0.534,
+            "tone_id": "openness_big5",
+            "tone_name": "Openness"
+          },
+          {
+            "score": 0.159,
+            "tone_id": "conscientiousness_big5",
+            "tone_name": "Conscientiousness"
+          },
+          {
+            "score": 0.437,
+            "tone_id": "extraversion_big5",
+            "tone_name": "Extraversion"
+          },
+          {
+            "score": 0.329,
+            "tone_id": "agreeableness_big5",
+            "tone_name": "Agreeableness"
+          },
+          {
+            "score": 0.606,
+            "tone_id": "neuroticism_big5",
+            "tone_name": "Emotional Range"
+          }
+        ],
+        "category_id": "social_tone",
+        "category_name": "Social Tone"
+      }
+    ]
+  },
+  "sentences_tone": [
+    {
+      "sentence_id": 0,
+      "text": "The search for EgyptAir Flight 804 is continuing after reports that the plane's wreckage had been found turned out to be false.",
+      "input_from": 0,
+      "input_to": 127,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.234877,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.58213,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.188785,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.290855,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.187649,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.909,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.699,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.425,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.089,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.239,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.58,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 1,
+      "text": "When searchers got close to debris found in the Mediterranean Sea they realized it didn't come from the missing airliner, EgyptAir's Vice Chairman Ahmed Adel told CNN.",
+      "input_from": 128,
+      "input_to": 295,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.198001,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.662026,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.111161,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.053864,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.44197,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.722,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.477,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.193,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.517,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.323,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.667,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "text": "The Airbus A320, which had 66 people on board, disappeared early Thursday as it flew from Paris to Cairo.",
+      "input_from": 296,
+      "input_to": 401,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.238156,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.454685,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.172445,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.195954,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.176686,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.478,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.843,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.244,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.576,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.166,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 3,
+      "text": "Earlier, Adel told CNN's Christiane Amanpour that the plane's wreckage had been found.",
+      "input_from": 402,
+      "input_to": 488,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.140476,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.495529,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.17713,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.388269,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.132619,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.952,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.35,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.152,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.625,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.285,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.72,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 4,
+      "text": "We stand corrected on finding the wreckage because what we identified is not a part of our plane.",
+      "input_from": 489,
+      "input_to": 586,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.307539,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.46174,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.44374,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.214203,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.111026,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.722,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.122,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.279,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.825,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.881,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.686,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 5,
+      "text": "So the search and rescue is still going on, Adel told CNN's The Lead with Jake Tapper.",
+      "input_from": 587,
+      "input_to": 673,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.165625,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.206526,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.199829,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.317539,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.364406,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.752,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.702,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.671,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.457,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.087,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 6,
+      "text": "Adel said EgyptAir is not involved in the search and is getting its information from Greek authorities and the Egyptian military, but he didn't give details on why the debris found in the water was said to be from the plane or how that information was gathered.",
+      "input_from": 674,
+      "input_to": 935,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.271456,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.680724,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.256793,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.027536,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.242782,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.892,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0.029,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.583,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.11,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.619,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.379,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.739,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 7,
+      "text": "The plane was carrying 56 passengers and 10 crew and security officers.",
+      "input_from": 936,
+      "input_to": 1007,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.192357,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.399514,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.320046,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.337316,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.120954,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.623,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.927,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.108,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.778,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.165,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 8,
+      "text": "Earlier, a spokesman for Greece's Hellenic National Defense general staff had said an Egyptian search aircraft spotted two floating objects 210 nautical miles southeast of Crete.",
+      "input_from": 1008,
+      "input_to": 1186,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.207135,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.683843,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.158007,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.204117,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.109605,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0.198,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.541,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.217,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.504,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.206,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.557,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    },
+    {
+      "sentence_id": 9,
+      "text": "It's unclear whether those objects were part of the wreckage described by Adel.",
+      "input_from": 1187,
+      "input_to": 1266,
+      "tone_categories": [
+        {
+          "tones": [
+            {
+              "score": 0.196422,
+              "tone_id": "anger",
+              "tone_name": "Anger"
+            },
+            {
+              "score": 0.447425,
+              "tone_id": "disgust",
+              "tone_name": "Disgust"
+            },
+            {
+              "score": 0.452754,
+              "tone_id": "fear",
+              "tone_name": "Fear"
+            },
+            {
+              "score": 0.101104,
+              "tone_id": "joy",
+              "tone_name": "Joy"
+            },
+            {
+              "score": 0.226619,
+              "tone_id": "sadness",
+              "tone_name": "Sadness"
+            }
+          ],
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0,
+              "tone_id": "analytical",
+              "tone_name": "Analytical"
+            },
+            {
+              "score": 0,
+              "tone_id": "confident",
+              "tone_name": "Confident"
+            },
+            {
+              "score": 0.65,
+              "tone_id": "tentative",
+              "tone_name": "Tentative"
+            }
+          ],
+          "category_id": "writing_tone",
+          "category_name": "Writing Tone"
+        },
+        {
+          "tones": [
+            {
+              "score": 0.642,
+              "tone_id": "openness_big5",
+              "tone_name": "Openness"
+            },
+            {
+              "score": 0.415,
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness"
+            },
+            {
+              "score": 0.352,
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion"
+            },
+            {
+              "score": 0.218,
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness"
+            },
+            {
+              "score": 0.641,
+              "tone_id": "neuroticism_big5",
+              "tone_name": "Emotional Range"
+            }
+          ],
+          "category_id": "social_tone",
+          "category_name": "Social Tone"
+        }
+      ]
+    }
+  ]
+}

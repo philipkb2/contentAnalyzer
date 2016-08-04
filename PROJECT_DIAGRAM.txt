@@ -1,0 +1,22 @@
+
+
+
+
+loginHeaderDir	loggedinHeaderDir	d-ConceptsDir	d-EmotionDir	d-EntitiesDir	d-KeywordsDir d-PersonaDir	d-PersonalityDir	d-PoliticalDir	d-SentimentDir	d-ToneDir
+		|				|					|			|				|					|			|				|					|				|			|
+	loginTmpl		loggedinTmpl					emotionTmpl													personalityTmpl		politicalTmpl	sentimentTmpl	toneTmpl
+
+								app.js
+	 ______________________________||________________________________
+	|			 |				   |				 |				 |
+loginCtrl	profileCtrl		navPanelTabsCtrl	mainTextCtrl	mainUrlCtrl
+	|____________|_________________|_________________|_______________|
+	 							   ||
+							   mainService
+							   	   |
+								 index.js
+	 ______________________________||____________________________
+	|			 |				|				 |				 |
+UserCtrl	IbmAl-Ctrl		IbmPI-Ctrl		Ibm-TA-Ctrl		IndicoCtrl
+	|
+UserModel

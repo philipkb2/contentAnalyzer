@@ -1,0 +1,41 @@
+
+.container {
+	width: 100%;
+	vertical-align: middle;
+}
+
+ /*NAVBAR */
+
+.navbar {
+    margin-bottom: -5px !important;
+}
+
+.navbar-inverse {
+    background-color: #364150 !important;
+}
+
+.navbar-brand {
+    margin: 1px 5px 0 0;
+    color: #ededed !important;
+}
+
+.navbar-company-title {
+    font-size: 22px !important;
+}
+
+#navbar-modal-btn {
+    display: inline-block;
+}
+
+.navbar-btn-logout {
+    margin: 5px 60px 5px 0 !important;
+}
+
+.btn {
+    /*margin: 2px 0;*/
+    padding: 8px 16px !important;
+}
+
+.btn-primary {
+    background-color: #286090;
+}

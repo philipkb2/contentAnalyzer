@@ -1,0 +1,84 @@
+
+// MULTIAPI RESPONSE: //
+{
+	"error": "The `relevance` api is not supported."
+}
+{
+	"results": {
+		"keywords": {
+			"results": {
+				"adel": 0.06450528087057483,
+				"egyptair": 0.04736646777349541,
+				"wreckage": 0.046008922041601015
+			}
+		},
+		"emotion": {
+			"results": {
+				"anger": 0.1471603810787201,
+				"joy": 0.0994643121957779,
+				"sadness": 0.47389939427375793,
+				"fear": 0.22917702794075012,
+				"surprise": 0.050298865884542465
+			}
+		},
+		"political": {
+			"results": {
+				"Libertarian": 0.6502763057811394,
+				"Liberal": 0.06652965031580313,
+				"Green": 0.08544420650690027,
+				"Conservative": 0.19774983739615723
+			}
+		},
+		"sentimenthq": {
+			"results": 0.0475786030292511
+		},
+		"personality": {
+			"results": {
+				"openness": 0.5587110324440715,
+				"extraversion": 0.39038909390821297,
+				"agreeableness": 0.4163624623365568,
+				"conscientiousness": 0.5634744609224385
+			}
+		}
+	}
+}
+
+
+// PERSONA RESPONSE: //
+{
+	"results": {
+		"advocate": 0.0889740747730923,
+		"debater": 0.05688207012511255,
+		"mediator": 0.06194016556331668,
+		"consul": 0.030171325139149305,
+		"executive": 0.049644798040390015,
+		"adventurer": 0.03763393442462688,
+		"logistician": 0.08895085594886482,
+		"commander": 0.08170836345903114,
+		"entrepreneur": 0.034560709961894504,
+		"logician": 0.10191820141074051,
+		"protagonist": 0.049657759757392006,
+		"architect": 0.14640060436694677,
+		"campaigner": 0.03456973133713842,
+		"entertainer": 0.021004060780059248,
+		"defender": 0.05405934041425102,
+		"virtuoso": 0.06192400155351379
+	}
+}
+
+// advocate
+// debater
+// mediator
+// consul
+// executive
+// adventurer
+// logistician
+// commander
+// entrepreneur
+// logician
+// protagonist
+// architect
+// campaigner
+// entertainer
+// defender
+// virtuoso

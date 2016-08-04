@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="textAnalyzer">
+    <head>
+        <meta charset="utf-8">
+        <title>Content Analyzer</title>
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/mainStyle.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/loginTmpl.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/homeTmpl.css">
+        <link rel="stylesheet" type="text/css" href="/css/analyzeTmpl.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/analyzeCharts.css" charset="utf-8">
+
+    </head>
+
+    <body>
+
+        <div class="body-inner">
+
+            <ui-view></ui-view>
+
+        </div>
+
+<!--         <div ng-controller="mainTextCtrl">
+
+            <h3>Enter your text here:</h3>
+            <textarea rows="4" cols="50" ng-model="textToAnalyze"></textarea>
+            <button ng-click="getMultiText(textToAnalyze)">Analyze</button>
+            <br>
+            Analyze URL - Alchemy Combined Data
+            <input type="text" value="" ng-model="urlToAnalyze">
+            <button ng-click="getMultiUrl(urlToAnalyze);">Analyze</button>
+            <br>
+            Tone Analyzer:
+            Emotion Tone: Anger: {{}}, Disgust: {{}}, Fear: {{}}, Joy: {{}}, Sadness: {{}}
+            Writing Tone: Analytical: {{}}, Confident: {{}}, Tentative: {{}}
+            Social Tone: Openness: {{}}, Conscientiousness: {{}}, Extraversion: {{}}, Agreeableness: {{}}, Emotional Range: {{}}
+            <br>
+            Indico:
+            <br>
+            Keywords: {{IDKeywords}}
+            <br>
+            Emotions: Anger: {{IDEmotionsAnger}}, Surprise: {{IDEmotionsSurprise}}, Sadness: {{IDEmotionsSadness}}, Fear: {{IDEmotionsFear}}, Joy: {{IDEmotionsJoy}}
+            <br>
+            Political: Libertarian: {{}}, Liberal: {{}}, Green: {{}}, Conservative: {{}}
+            <br>
+            Sentiment: {{IDSentiment}},
+            <br>
+            Personality: Openness: {{}}, Extraversion: {{}}, Agreeableness: {{}}, Conscientiousness: {{}}
+            <br>
+            Persona: {{IDPersona}}
+            Advocate
+            Debater
+            Mediator
+            Consul
+            Executive
+            Adventurer
+            Logistician
+            Commander
+            Entrepreneur
+            Logician
+            Protagonist
+            Architect
+            Campaigner
+            Entertainer
+            Defender
+            Virtuoso
+            <br>
+            Alchemy Sentiment: {{ALSentimentScore}}
+            <br>
+            Alchemy Emotions:
+            Anger: {{ALEmotionsAngerScore}}
+            Disgust: {{ALEmotionsDisgustScore}}
+            Fear: {{ALEmotionsFearScore}}
+            Joy: {{ALEmotionsJoyScore}}
+            Sadness: {{ALEmotionsSadnessScore}}
+            <br>
+            Concepts (x5): {{ALConceptsText1}}, relevance: {{ALConceptsRelevance1}}
+            <br>
+            Entities (x5): {{ALEntitiesText1}}, relevance: {{ALEntitiesRelevance1}}, type: {{ALEntitiesType1}}, count: {{ALEntitiesCount1}}
+            <br>
+            Keywords (x5): {{ALKeywordsText1}}, relevance: {{ALKeywordsRelevance1}}
+            <br>
+            URL: {{ALUrl}}
+            <br>
+            Text: {{ALText}}
+            <br>
+        </div> -->
+
+        <!-- ANGULAR -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+        <!-- ANGULAR ANIMATE -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+        <!-- UI-ROUTER -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+        <!-- MODERNIZR -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+        <!-- UI-BOOTSTRAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- D3 & Nvd3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+        <!-- FILES -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers/mainUrlCtrl.js"></script>
+        <script src="js/controllers/mainTextCtrl.js"></script>
+        <script src="js/controllers/loginCtrl.js"></script>
+        <script src="js/controllers/profileCtrl.js"></script>
+        <script src="js/controllers/navPanelTabsCtrl.js"></script>  
+        <script src="js/mainService.js"></script>
+        <script src="directives/loginHeaderDir.js"></script>
+        <script src="directives/loggedinHeaderDir.js"></script>
+        <script src="directives/displayConceptsDir.js"></script>
+        <script src="directives/displayEmotionDir.js"></script>
+        <script src="directives/displayEntitiesDir.js"></script>
+        <script src="directives/displayKeywordsDir.js"></script>
+        <script src="directives/displayPersonaDir.js"></script>
+        <script src="directives/displayPersonalityDir.js"></script>
+        <script src="directives/displayPoliticalDir.js"></script>
+        <script src="directives/displaySentimentDir.js"></script>
+        <script src="directives/displayToneDir.js"></script>      
+    </body>
+</html>

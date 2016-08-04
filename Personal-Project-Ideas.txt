@@ -1,0 +1,35 @@
+IDEAS for personal project
+
+Amazon clone
+Something with D3
+
+
+
+Food
+Board/Card games
+Movies
+Goals
+Reminders
+Plants
+Trees
+Geography
+
+Inspiration (Twitter)
+Text journal storage organizer
+College scholarship
+Lego-building app to generate instructions by users
+Literary style converter app
+How much is $___ worth. Weighing how you spend money
+< Historic temp comparer
+Outfit generator with complementary colors, and to see if they would look good
+Small niche locator and rating site
+How to get rid of something website (bad habits, acne)
+*** How-to website that has excellent user-generated material and well organized
+Cheese website
+Homeowner's guide to success
+Thrift store locator
+Requirements to move to different countries, or to travel
+
+Github: markeperk - project: /capture
+YouTube Vienno about D3
+VET: APIs
