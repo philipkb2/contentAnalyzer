@@ -5,7 +5,9 @@ module.exports = {
 	CreateContent: function(req, res, next){
 		console.log("Data Stored");
 		var newAnalysis = new Analysis(req.body);
-		newAnalysis.save(function(err, res))
+		newAnalysis.save(function(err, res) {
+			
+		});
 	},
 
 	createChartData: function(req, res, next){
@@ -18,6 +20,6 @@ module.exports = {
 				res.status(200).json(result);
 			}
 		});
-	},
+	}
 
 };

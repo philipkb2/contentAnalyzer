@@ -6,8 +6,9 @@ angular.module('textAnalyzer')
 			return $http({
 				method: 'POST',
 				url: '/api/getIndicoMultiText',
-				data: {text: textToAnalyze},
+				data: {text: textToAnalyze}
 			}).then(function(response){
+				console.log(response);
 				return response.data;
 			});
 		};
@@ -16,19 +17,31 @@ angular.module('textAnalyzer')
 			return $http({
 				method: 'POST',
 				url: '/api/getIndicoPersonaText',
-				data: {text: textToAnalyze},
+				data: {text: textToAnalyze}
 			}).then(function(response){
 				return response;
 			});
 		};
 
 // ALCHEMY //
-		this.get_al_combined = function(dataToAnalyze){
+		this.get_al_combinedText = function(textToAnalyze){
 			return $http({
 				method: 'POST',
 				url: '/api/getAlchemyCombined',
-				data: {urlOrText: dataToAnalyze}
+				data: {text: textToAnalyze}
 			}).then(function(response){
+				console.log(response.data);
+				return response.data;
+			});
+		};
+
+		this.get_al_combinedUrl = function(urlToAnalyze){
+			return $http({
+				method: 'POST',
+				url: '/api/getAlchemyCombined',
+				data: {url: urlToAnalyze}
+			}).then(function(response){
+				console.log(response);
 				return response.data;
 			});
 		};
@@ -65,7 +78,36 @@ angular.module('textAnalyzer')
 		};
 
 // PERSONALITY INSIGHTS //
-		this.get_personality_insights = function()
+		this.get_personality_insights = function(){
+
+		};
+
+// SAVE DATA //
+		this.create_saved_analysis = function(){
+			return $http({
+				method: 'POST',
+				url: '/api/createSavedAnalysis',
+				data: {
+					
+				}
+			});
+		};
+
+        this.createNewPractice = function (data) {
+            return $http({
+                method: 'POST',
+                url: "/create/practice",
+                data: {
+                    name: data.name,
+                    email: data.email,
+                    phoneNumber: data.phoneNumber,
+                    mailingAddress: data.mailingAddress
+                }
+            }).then(function (response) {
+                console.log("service", response);
+                return response.data;
+            });
+        };
 
 // LOGIN //
 		this.login = function(user){
@@ -100,7 +142,7 @@ angular.module('textAnalyzer')
 		this.logout = function(){
 			return $http({
 				method: 'GET',
-				url: '/logout',
+				url: '/logout'
 			}).then(function(response){
 				return response;
 			});

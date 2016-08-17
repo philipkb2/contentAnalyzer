@@ -15,7 +15,7 @@ angular.module('textAnalyzer')
 
 		$scope.getMultiText = function(textToAnalyze){
 			// ALCHEMY
-				mainService.get_al_combined(textToAnalyze).then(function(response){
+				mainService.get_al_combinedText(textToAnalyze).then(function(response){
 					$scope.al_response = response;
 					// $scope.ALConceptsText1 = response.concepts[0].text;
 					// $scope.ALConceptsRelevance1 = response.concepts[0].relevance;

@@ -71,13 +71,13 @@
                         <div class="results-content tab-content col-xs-12">
                         <!-- To understand TA results: http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tone-analyzer/understanding-tone.shtml -->
 
-                            <div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="id_response.sentimenthq">
-                                <display-sentiment sentiment-data="id_response.sentimenthq"></display-sentiment>
-                                {{id_response.sentimentHQ}}<br>{{al_sentimentScore}}
+                            <div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="indc_response.sentimentHQ">
+                                <display-sentiment sentiment-data="indc_response.sentimentHQ"></display-sentiment>
+                                {{indc_response.sentimentHQ}}<br>{{al_sentimentScore}}
                             </div>
 
-                            <div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="id_response.emotion">
-                                <display-emotion emotion-data="id_response.emotion"></display-emotion>
+                            <div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="indc_response.emotion">
+                                <display-emotion emotion-data="indc_response.emotion"></display-emotion>
                             <!-- ng-repeat="emotion in emotions" -->
                                 <!-- Alchemy - <br>Anger: {{al_emotions.anger}}<br>Disgust: {{al_emotions.disgust}}<br>Fear: {{al_emotions.feat}}<br>Joy: {{al_emotions.joy}}<br>Sadness: {{al_emotions.sadness}}<br> -->
                             </div>
@@ -86,36 +86,36 @@
                                 <display-tone tone-data="ta_documentTone"></display-tone>
                             </div>
 
-                            <div role="tabpanel" class="personality-data-cont tab-pane fade col-xs-12" ng-if="id_response.personality">
-                                <display-personality personality-data="id_response.personality"></display-personality>
+                            <div role="tabpanel" class="personality-data-cont tab-pane fade col-xs-12" ng-if="indc_response.personality">
+                                <display-personality personality-data="indc_response.personality"></display-personality>
                             </div>
 
-                            <div role="tabpanel" class="political-data-cont tab-pane fade col-xs-12" ng-if="id_response"><!-- ng-repeat="(key, val) in political" -->
-                                <display-political political-data="id_response.political"></display-political>
+                            <div role="tabpanel" class="political-data-cont tab-pane fade col-xs-12" ng-if="indc_response"><!-- ng-repeat="(key, val) in political" -->
+                                <display-political political-data="indc_response.political"></display-political>
                             </div>
 
                             <div role="tabpanel" class="keywords-data-cont tab-pane fade col-xs-12">
-<!--                                 <display-keywords keywords-data="id_response.keywords"></display-keywords>
- -->                                INDICO - <br>Keywords (x5): {{id_response.keywords}}, relevance: {{}}
+<!--                                 <display-keywords keywords-data="indc_response.keywords"></display-keywords>
+ -->                                INDICO - <br>Keywords (x5): {{indc_response.keywords}}, relevance: {{}}
                                 <!-- <display-keyword keyword-data="al_response.keywords"></display-keyword> -->
                             </div>
 
                             <div role="tabpanel" class="concepts-data-cont tab-pane fade col-xs-12" ng-repeat="concept in concepts">
-<!--                                 <display-concepts concepts-data="id_response.concepts"></display-concepts>
- -->                                Concepts (x5): {{id_response.concepts[0].text}}, relevance: {{id_response.concepts[0].relevance}}
-                                                <br>{{id_response.concepts[1].text}}, relevance: {{id_response.concepts[1].relevance}}
-                                                <br>{{id_response.concepts[2].text}}, relevance: {{id_response.concepts[2].relevance}}
-                                                <br>{{id_response.concepts[3].text}}, relevance: {{id_response.concepts[3].relevance}}
-                                                <br>{{id_response.concepts[4].text}}, relevance: {{id_response.concepts[4].relevance}}
+<!--                                 <display-concepts concepts-data="indc_response.concepts"></display-concepts>
+ -->                                Concepts (x5): {{indc_response.concepts[0].text}}, relevance: {{indc_response.concepts[0].relevance}}
+                                                <br>{{indc_response.concepts[1].text}}, relevance: {{indc_response.concepts[1].relevance}}
+                                                <br>{{indc_response.concepts[2].text}}, relevance: {{indc_response.concepts[2].relevance}}
+                                                <br>{{indc_response.concepts[3].text}}, relevance: {{indc_response.concepts[3].relevance}}
+                                                <br>{{indc_response.concepts[4].text}}, relevance: {{indc_response.concepts[4].relevance}}
                             </div>
 
                             <div role="tabpanel" class="entities-data-cont tab-pane fade col-xs-12" ng-repeat="entity in entities">
-<!--                                 <display-entities entities-data="id_response.entities"></display-entities>
- -->                                Entities (x5):<br>{{id_response.entity[0].text}}<br>relevance: {{id_response.entity[0].relevance}}<br>type: {{id_response.entity[0].type}}<br>count: {{id_response.entity[0].count}}
+<!--                                 <display-entities entities-data="indc_response.entities"></display-entities>
+ -->                                Entities (x5):<br>{{indc_response.entity[0].text}}<br>relevance: {{indc_response.entity[0].relevance}}<br>type: {{indc_response.entity[0].type}}<br>count: {{indc_response.entity[0].count}}
                             </div>
 
                             <div role="tabpanel" class="persona-data-cont tab-pane fade col-xs-12">
-<!--                                 <display-persona persona-data="id_response.persona"></display-persona>
+<!--                                 <display-persona persona-data="indc_response.persona"></display-persona>
  -->                                {{IDPersona}}<br>Advocate<br>Debater<br>Mediator<br>Consul<br>Executive<br>Adventurer<br>Logistician<br>Commander<br>Entrepreneur<br>Logician<br>Protagonist<br>Architect<br>Campaigner<br>Entertainer<br>Defender<br>Virtuoso<br>
                             </div>
 

@@ -12,6 +12,42 @@ var alchemy_language = watson.alchemy_language({
 
 module.exports = {
 
+	GetAlchemyCombined: function(req, res, next){
+
+		var watsonMethods = 'entities,keywords,concepts,doc-sentiment,doc-emotion';
+		var textParams = {
+			extract: watsonMethods,
+			maxRetrieve: 5,
+			linkedData: 0,
+			text: req.body.text
+		};
+		var urlParams = {
+			extract: watsonMethods,
+			maxRetrieve: 5,
+			linkedData: 0,
+			url: req.body.url,
+			showSourceText: 1
+		};
+
+		var chooseParams = function(req){
+			if (req.body.text) {
+				return textParams;
+			} else if (req.body.url) {
+				return urlParams;
+			}
+		};
+
+		alchemy_language.combined(chooseParams(req), function (err, response) {
+			if (err) {
+				console.log('Alchemy Error: ' + err);
+				res.status(500).json(err);
+			} else if (response) {
+				console.log('Alchemy Response: ' + response);
+				res.status(200).json(response);
+			}
+		});
+	},
+
 	CreateAlchemyCombined: function(req, res, next){
 
 	},
@@ -32,46 +68,14 @@ module.exports = {
 			{'showSourceText': 1, 'linkedData': 0, 'maxRetrieve': 20},
 			function(err, response) {
 				if (err) {
+					console.log('Alchemy Error:' + err);
 					res.status(500).json(err);
-				} else {
-					if (response) {
-						res.status(200).json(response);
-					}
+				} else if (response) {
+					console.log('Alchemy Response:' + response);
+					res.status(200).json(response);
 				}
 			}
 		);
-	},
-
-	GetAlchemyCombined: function(req, res, next){
-
-		var watsonMethods = 'entities,keywords,concepts,doc-sentiment,doc-emotion';
-		var textParams = {
-			extract: watsonMethods,
-			sentiment: 123,
-			maxRetrieve: 5,
-			text: 'req.body.text'
-		};
-		var urlParams = {
-			extract: watsonMethods,
-			sentiment: 123,
-			maxRetrieve: 5,
-			url: 'req.body.url'
-		};
-
-		var chooseParams = function(req){
-			if (req.body.text === true) {
-				return "hello";
-				// return 'text: 'req.body.text'';
-			}
-		};
-
-		alchemy_language.combined(chooseParams, function (err, res) {
-			if (err) {
-				res.status(500).json(err);
-			} else if (res) {
-				res.status(200).json(res);
-			}
-		});
 	},
 
 		GetAlchemyCombinedOLD: function(req, res, next){

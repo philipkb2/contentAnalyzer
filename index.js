@@ -4,7 +4,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 // LOGIN
 var config = require('./config');
-var UserCtrl = require('./controllers/UserCtrl.js');
+var UserCtrl = require('./controllers/userCtrl.js');
 var passport = require('./services/passport');
 // ANALYSIS
 var indicoCtrl = require('./controllers/indicoCtrl.js');
@@ -24,15 +24,15 @@ app.use(express.static(__dirname + '/public')); // Things in the public folder a
 app.use(bodyParser.json());
 
 // ======== ANALYSIS APIs ========
-app.get('/api/getIndicoMultiText', indicoCtrl.GetIndicoMultiText);
-// app.get('/api/getAlchemyCombined', ibmAlCtrl.GetAlchemyCombined);
+// app.post('/api/getIndicoMultiText', indicoCtrl.GetIndicoMultiText);
+app.post('/api/getAlchemyCombined', ibmAlCtrl.GetAlchemyCombined);
 // app.get('/api/getAlchemySentiment', ibmAlCtrl.GetAlchemySentiment);
 // app.get('/api/getAlchemyEmotions', ibmAlCtrl.GetAlchemyEmotions);
 // app.get('/api/getToneAnalyzer', toneAnalyzerCtrl.GetToneAnalyzer);
 // app.get('/api/getPersonalityInsights', ibmPICtrl.GetPersonalityInsights);
 	// app.get('/api/getIndicoPersonaText', indicoCtrl.GetIndicoPersonaText);
 
-app.post('/api/createIndicoMultiText', indicoCtrl.CreateIndicoMultiText);
+// app.post('/api/createIndicoMultiText', indicoCtrl.CreateIndicoMultiText);
 // app.post('/api/createAlchemyCombined', ibmAlCtrl.CreateAlchemyCombined);
 // app.post('/api/createAlchemySentiment', ibmAlCtrl.CreateAlchemySentiment);
 // app.post('/api/createAlchemyEmotions', ibmAlCtrl.CreateAlchemyEmotions);

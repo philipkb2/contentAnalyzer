@@ -8,29 +8,25 @@ indico.apiKey = keys.indicoKey;
 
 module.exports = {
 
-	GetIndicoMultiText: function(req, res, next){
-		indico.analyzeText(
-			req.body.text,
-			{
-				apis: [
-					'sentimentHQ',
-					'personality',
-					// 'personas',
-					// 'persona',
-					'emotion',
-					'political',
-					'keywords'
-					// 'relevance' ['', '']
-				]
-			}
-		)
-		// console.log(arguments[0]);
-		// console.log(arguments[1]);
-		// console.log(arguments);
-		.then(function(response, err) {
+	// Consider splitting into separate API calls in case users only look at a portion of them.
+	// That way the # of calls can be reduced.
+	GetIndicoMultiText: function(req, res, next) {	// https://indico.io/docs#analyze_text
+		indico.analyzeText(req.body.text, {
+			apis: [
+				'sentimentHQ'
+				// 'personality',
+				// 'personas',
+				// 'emotion',
+				// 'political',
+				// 'keywords'
+				// 'relevance' ['', '']
+			]
+		}).then(function(response, err) {	// console.log(arguments[0]);	// console.log(arguments);
 			if (err) {
+				console.log(err);
 				res.status(500).json(err);
 			} else if (response) {
+				console.log(response);
 				res.status(200).json(response);
 			}
 		});

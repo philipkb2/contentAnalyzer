@@ -16,7 +16,7 @@ angular.module('textAnalyzer')
 		$scope.getMultiUrl = function(urlToAnalyze){
 			// ALCHEMY
 			var getAlchemyCombinedUrl = function(urlToAnalyze){
-				mainService.get_al_combined(urlToAnalyze).then(function(response){
+				mainService.get_al_combinedUrl(urlToAnalyze).then(function(response){
 					$scope.al_response = response;
 						// $scope.ALText = response.text;
 						// $scope.ALUrl = response.url;

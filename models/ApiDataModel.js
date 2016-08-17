@@ -12,6 +12,7 @@ var Analysis = new mongoose.Schema({
 	},
 	title: String,
 // INDICO - 7 features // https://indico.io/docs
+// 30 scores + 6 keywords & scores, 6 categories
 	indicoSentiment: Number,
 	indicoPolitical: {
 		conservative: Number,
@@ -69,6 +70,7 @@ var Analysis = new mongoose.Schema({
 		keyword6Score: Number
 	},
 // IBM ALCHEMY - 6 features // http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/
+// 6 scores, 15 text/label + scores, 5 categories, text
 	alchemyTextExtraction: String,
 	alchemySentiment: Number,
 	alchemyEmotion: {
@@ -101,6 +103,7 @@ var Analysis = new mongoose.Schema({
 		taxonomy5: { label: String, score: Number, confident: Boolean }
 	},
 // IBM TONE ANALYZER // http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/tone-analyzer/api/v3/#post-tone
+// 13 scores, 3 categories
 	taEmotionTone: {
 		anger: Number,
 		disgust: Number,
@@ -121,6 +124,7 @@ var Analysis = new mongoose.Schema({
 		neuroticism: Number
 	},
 // IBM PERSONALITY INSIGHTS // http://www.ibm.com/watson/developercloud/personality-insights/api/v2/?node#authentication
+// 52 scores, 7 categories, 1 word count
 	piWordCount: Number,
 	// BIG 5
 	piOpenness: {
