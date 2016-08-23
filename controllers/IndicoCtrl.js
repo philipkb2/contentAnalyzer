@@ -4,23 +4,22 @@ var keys = require('../keys.js');
 
 indico.apiKey = keys.indicoKey;
 
+var chooseInput = function(req) {
+	if (req.body.text) {
+		return req.body.text;
+	} else if (req.body.url) {
+		return req.body.url;
+	}
+};
+
 // Keys can no longer be passed in as url parameters >> https://indico.io/updates/security
 
 module.exports = {
 
-	// Consider splitting into separate API calls in case users only look at a portion of them.
-	// That way the # of calls can be reduced.
+	// Consider splitting into separate API calls in case users only look at a portion of them. Will reduce # of calls.
 	GetIndicoMultiText: function(req, res, next) {	// https://indico.io/docs#analyze_text
-		indico.analyzeText(req.body.text, {
-			apis: [
-				'sentimentHQ'
-				// 'personality',
-				// 'personas',
-				// 'emotion',
-				// 'political',
-				// 'keywords'
-				// 'relevance' ['', '']
-			]
+		indico.analyzeText(chooseInput(req), {
+			apis: ['sentimentHQ', 'personality', 'emotion', 'political', 'keywords']
 		}).then(function(response, err) {	// console.log(arguments[0]);	// console.log(arguments);
 			if (err) {
 				console.log(err);
@@ -32,82 +31,28 @@ module.exports = {
 		});
 	},
 
-	CreateIndicoMultiText: function(req, res, next){
+	GetIndicoPersonaText: function(req, res, next) {
+		indico.personas(chooseInput(req))
+			.then(function(response, err) {
+				if (err) {
+					console.log(err);
+					res.status(500).json(err);
+				} else if (response) {
+					console.log(response);
+					res.status(200).json(response);
+				}
+			});
+	},
+
+	CreateIndicoMultiText: function(req, res, next) {
 		
 	},
 
-	GetIndicoPersonaText: {
-		// function(req, res, next){
-	// 	needle.post(
-	// 		'https://apiv2.indico.io/personality?key=' + indico.apiKey + '&persona=true&threshold=0.1',
-	// 		// JSON.stringify
-	// 		// {
-	// 		// 	"data": req.body.text,
-	// 		// 	"persona": true,
-	// 		// 	"threshold": 0.1
-	// 		// },
-	// 		function(err, response) {
-	// 			if (err) {
-	// 				return err;
-	// 				// res.status(500).json(err);
-	// 			} else if (response) {
-	// 				console.log(response);
-	// 				// res.status(200).send(response);
-	// 				return response;
-	// 			}
-	// 		}
-	// 	);
+	CreateIndicoPersonaText: function(req, res, next) {
+		
 	}
 
 };
-
-
-
-// var needleData = {
-// 		"data": "I only stay home on Saturday nights to read.",
-// 		"persona": true,
-// 		"threshold": 0.1
-// 		};
-
-
-
-// $.post(
-//   'https://apiv2.indico.io/personality?key=083b2a5e7d4b1fc8856a99b1674a076e',
-//   {
-//     data: JSON.stringify({
-//       'data': "I only stay home on Saturday nights to read.",
-//       'persona': true,
-//       'threshold': 0.1
-//     }),
-//     success: function (data) {
-//       console.log(data);
-//     }
-//   }
-// );
-
-
-
-// 		indico.personas(req.body.text)
-// 			.then(function(response, err) {
-// 				if (err) {
-// 					res.status(500).json(err);
-// 				} else if (response) {
-// 					res.status(200).json(response);
-// 				}
-// 			});
-// 	}
-
-
-
-
-// indico.analyzeText(
-// 	'<TEXT>',
-// 	['RelatedTerm1', 'RelatedTerm2'],
-// 	{version: 2},
-// 	{apis: ['sentiment_hq', 'personality', 'persona', 'emotion', 'political', 'keywords', 'relevance']}
-// )
-// 	.then(response)
-// 	.catch(logError);
 
 
 // ============================================================

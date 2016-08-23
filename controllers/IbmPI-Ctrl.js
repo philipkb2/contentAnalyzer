@@ -14,24 +14,15 @@ module.exports = {
 			version: 'v2'
 		});
 
-		personality_insights.profile({
-			function(req) {
-				if (params === req.body.text) {
-					return "text: req.body.text"; // minimum 100 words, should be 3500+, ideally 6000+
-				} else if (params === req.body.url) {
-					return "url: req.body.url";
-				}
+		personality_insights.profile({text: req.body.text}, function(err, response) {	// minimum 100 words, should be 3500+, ideally 6000+
+			if (err) {
+				console.log('PI Error: ' + err);
+				res.status(500).json(err);
+			} else if (response) {
+				console.log('PI Response: ' + response);
+				console.log(JSON.stringify(response, null, 2));
+				res.status(200).json(response, null, 2);
 			}
-		},
-			function (err, res) {
-				if (err) {
-					console.log('error:', err);
-					res.status(500).json(err);
-				}
-				else {
-					console.log(JSON.stringify(res, null, 2));
-					res.status(200).json(res, null, 2);
-				}
 		});
 	},
 

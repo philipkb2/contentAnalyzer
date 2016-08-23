@@ -8,7 +8,18 @@ angular.module('textAnalyzer')
 				url: '/api/getIndicoMultiText',
 				data: {text: textToAnalyze}
 			}).then(function(response){
-				console.log(response);
+				console.log(response.data);
+				return response.data;
+			});
+		};
+
+		this.get_indc_multiUrl = function(urlToAnalyze){
+			return $http({
+				method: 'POST',
+				url: '/api/getIndicoMultiText',
+				data: {url: urlToAnalyze}
+			}).then(function(response){
+				console.log(response.data);
 				return response.data;
 			});
 		};
@@ -19,7 +30,8 @@ angular.module('textAnalyzer')
 				url: '/api/getIndicoPersonaText',
 				data: {text: textToAnalyze}
 			}).then(function(response){
-				return response;
+				console.log(response.data);
+				return response.data;
 			});
 		};
 
@@ -41,28 +53,8 @@ angular.module('textAnalyzer')
 				url: '/api/getAlchemyCombined',
 				data: {url: urlToAnalyze}
 			}).then(function(response){
-				console.log(response);
+				console.log(response.data);
 				return response.data;
-			});
-		};
-
-		this.get_al_sentiment = function(dataToAnalyze){
-			return $http({
-				method: 'POST',
-				url: '/api/getAlchemySentiment',
-				data: {urlOrText: dataToAnalyze}
-			}).then(function(response){
-				return response.data;
-			});
-		};
-
-		this.get_al_emotions = function(dataToAnalyze){
-			return $http({
-				method: 'POST',
-				url: '/api/getAlchemyEmotions',
-				data: {urlOrText: dataToAnalyze}
-			}).then(function(response){
-				return response.data.docEmotions;
 			});
 		};
 
@@ -73,13 +65,21 @@ angular.module('textAnalyzer')
 				url: '/api/getToneAnalyzer',
 				data: {text: textToAnalyze}
 			}).then(function(response){
+				console.log(response.data);
 				return response.data;
 			});
 		};
 
 // PERSONALITY INSIGHTS //
-		this.get_personality_insights = function(){
-
+		this.get_personality_insights = function(textToAnalyze){
+			return $http({
+				method: 'POST',
+				url: '/api/getPersonalityInsights',
+				data: {text: textToAnalyze}
+			}).then(function(response){
+				console.log(response.data);
+				return response.data;
+			});
 		};
 
 // SAVE DATA //

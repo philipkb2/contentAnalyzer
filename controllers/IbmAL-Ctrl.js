@@ -12,24 +12,28 @@ var alchemy_language = watson.alchemy_language({
 
 module.exports = {
 
-	GetAlchemyCombined: function(req, res, next){
+	GetAlchemyCombined: function(req, res, next) {
 
 		var watsonMethods = 'entities,keywords,concepts,doc-sentiment,doc-emotion';
 		var textParams = {
 			extract: watsonMethods,
 			maxRetrieve: 5,
 			linkedData: 0,
+			// emotion: 1,	// Analyze emotions associated with each entity & keyword. Incurs an addt'l transaction charge.
+			// sentiment: 1,	// Analyze the sentiment towards each entity & keyword. Incurs an addt'l transaction charge.
 			text: req.body.text
 		};
 		var urlParams = {
 			extract: watsonMethods,
 			maxRetrieve: 5,
 			linkedData: 0,
+			// emotion: 1,	// Analyze emotions associated with each entity & keyword. Incurs an addt'l transaction charge.
+			// sentiment: 1,	// Analyze the sentiment towards each entity & keyword. Incurs an addt'l transaction charge.
 			url: req.body.url,
-			showSourceText: 1
+			showSourceText: 1	// Returns URL's cleaned-up text
 		};
 
-		var chooseParams = function(req){
+		var chooseParams = function(req) {
 			if (req.body.text) {
 				return textParams;
 			} else if (req.body.url) {
@@ -38,6 +42,16 @@ module.exports = {
 		};
 
 		alchemy_language.combined(chooseParams(req), function (err, response) {
+			if (err) {
+				res.status(500).json(err);
+			} else if (response) {
+				res.status(200).json(response);
+			}
+		});
+	},
+
+	GetAlchemyTextOnly: function(req, res, next) {
+		alchemy_language.combined({extract: 'text', url: req.body.url}, function(err, response) {
 			if (err) {
 				console.log('Alchemy Error: ' + err);
 				res.status(500).json(err);
@@ -48,84 +62,11 @@ module.exports = {
 		});
 	},
 
-	CreateAlchemyCombined: function(req, res, next){
+	CreateAlchemyCombined: function(req, res, next) {
 
-	},
-
-	CreateAlchemySentiment: function(req, res, next){
-
-	},
-
-	CreateAlchemyEmotions: function(req, res, next){
-
-	},
-
-	GetAlchemyTextFromURL: function(req, res, next){
-		var alchemy = new AlchemyAPI(alchemyKey);
-		alchemy.combined(
-			req.body.urlOrText,
-			['text', 'entities', 'keywords', 'concepts', 'sentiment', 'emotions'],
-			{'showSourceText': 1, 'linkedData': 0, 'maxRetrieve': 20},
-			function(err, response) {
-				if (err) {
-					console.log('Alchemy Error:' + err);
-					res.status(500).json(err);
-				} else if (response) {
-					console.log('Alchemy Response:' + response);
-					res.status(200).json(response);
-				}
-			}
-		);
-	},
-
-		GetAlchemyCombinedOLD: function(req, res, next){
-			var alchemy = new AlchemyAPI(alchemyKey);
-			alchemy.combined(
-				req.body.urlOrText,
-				['text', 'entities', 'keywords', 'concepts', 'sentiment', 'emotions'],
-				{'showSourceText': 1, 'linkedData': 0, 'maxRetrieve': 20},
-				function(err, res) {
-					if (err) {
-						res.status(500).json(err);
-					} else if (res) {
-						res.status(200).json(res);				
-					}
-				}
-			);
-		},
-
-	GetAlchemySentiment: function(req, res, next){
-		var alchemy = new AlchemyAPI(alchemyKey);
-		alchemy.sentiment(
-			req.body.urlOrText,
-			{},
-			function(err, res) {
-				if (err) {
-					res.status(500).json(err);
-				} else if (res) {
-					res.status(200).json(res);			
-				}
-			}
-		);
-	},
-
-	GetAlchemyEmotions: function(req, res, next){
-		var alchemy = new AlchemyAPI(alchemyKey);
-		alchemy.emotions(
-			req.body.urlOrText,
-			{},
-			function(err, res) {
-				if (err) {
-					res.status(500).json(err);
-				} else if (res) {
-					res.status(200).json(res);
-				}
-			}
-		);
 	}
 
 };
-
 
 // ==============================================================================
 // For AlchemyAPI...

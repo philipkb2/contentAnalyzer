@@ -25,20 +25,16 @@ app.use(bodyParser.json());
 
 // ======== ANALYSIS APIs ========
 // app.post('/api/getIndicoMultiText', indicoCtrl.GetIndicoMultiText);
+// app.post('/api/getIndicoPersonaText', indicoCtrl.GetIndicoPersonaText);
 app.post('/api/getAlchemyCombined', ibmAlCtrl.GetAlchemyCombined);
-// app.get('/api/getAlchemySentiment', ibmAlCtrl.GetAlchemySentiment);
-// app.get('/api/getAlchemyEmotions', ibmAlCtrl.GetAlchemyEmotions);
-// app.get('/api/getToneAnalyzer', toneAnalyzerCtrl.GetToneAnalyzer);
-// app.get('/api/getPersonalityInsights', ibmPICtrl.GetPersonalityInsights);
-	// app.get('/api/getIndicoPersonaText', indicoCtrl.GetIndicoPersonaText);
+// app.post('/api/getToneAnalyzer', toneAnalyzerCtrl.GetToneAnalyzer);
+app.post('/api/getPersonalityInsights', ibmPICtrl.GetPersonalityInsights);
 
 // app.post('/api/createIndicoMultiText', indicoCtrl.CreateIndicoMultiText);
 // app.post('/api/createAlchemyCombined', ibmAlCtrl.CreateAlchemyCombined);
-// app.post('/api/createAlchemySentiment', ibmAlCtrl.CreateAlchemySentiment);
-// app.post('/api/createAlchemyEmotions', ibmAlCtrl.CreateAlchemyEmotions);
 // app.post('/api/createToneAnalyzer', toneAnalyzerCtrl.CreateToneAnalyzer);
 // app.post('/api/createPersonalityInsights', ibmPICtrl.CreatePersonalityInsights);
-	// app.post('/api/createIndicoPersonaText', indicoCtrl.CreateIndicoPersonaText);
+// app.post('/api/createIndicoPersonaText', indicoCtrl.CreateIndicoPersonaText);
 
 // ======== PASSPORT ========
 app.use(session({

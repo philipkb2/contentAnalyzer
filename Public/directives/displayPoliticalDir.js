@@ -21,15 +21,15 @@ angular.module('textAnalyzer')
 
 		        nv.addGraph(function() {
 		            var politicalChart = nv.models.pieChart()
-		                .x(function(d) { return d.key })
-		                .y(function(d) { return d.y })
+		                .x(function(d) { return d.key; })
+		                .y(function(d) { return d.y; })
 		                .donut(true)
 		                .width(width)
 		                .height(height)
 		                .padAngle(.07)
 		                .cornerRadius(5)
 		                .id('donut1'); // allow custom CSS for this one svg
-		            politicalChart.title("");
+		            politicalChart.title(""); // "100%"
 		            politicalChart.pie.labelsOutside(true).donut(true);
 		            // politicalChart.pie.donutLabelsOutside(true).donut(true); // DEPRECATED
 		            d3.select("#piePolitical1")
