@@ -23,70 +23,8 @@
 
         </div>
 
-<!--         <div ng-controller="mainTextCtrl">
-
-            <h3>Enter your text here:</h3>
-            <textarea rows="4" cols="50" ng-model="textToAnalyze"></textarea>
-            <button ng-click="getMultiText(textToAnalyze)">Analyze</button>
-            <br>
-            Analyze URL - Alchemy Combined Data
-            <input type="text" value="" ng-model="urlToAnalyze">
-            <button ng-click="getMultiUrl(urlToAnalyze);">Analyze</button>
-            <br>
-            Tone Analyzer:
-            Emotion Tone: Anger: {{}}, Disgust: {{}}, Fear: {{}}, Joy: {{}}, Sadness: {{}}
-            Writing Tone: Analytical: {{}}, Confident: {{}}, Tentative: {{}}
-            Social Tone: Openness: {{}}, Conscientiousness: {{}}, Extraversion: {{}}, Agreeableness: {{}}, Emotional Range: {{}}
-            <br>
-            Indico:
-            <br>
-            Keywords: {{IDKeywords}}
-            <br>
-            Emotions: Anger: {{IDEmotionsAnger}}, Surprise: {{IDEmotionsSurprise}}, Sadness: {{IDEmotionsSadness}}, Fear: {{IDEmotionsFear}}, Joy: {{IDEmotionsJoy}}
-            <br>
-            Political: Libertarian: {{}}, Liberal: {{}}, Green: {{}}, Conservative: {{}}
-            <br>
-            Sentiment: {{IDSentiment}},
-            <br>
-            Personality: Openness: {{}}, Extraversion: {{}}, Agreeableness: {{}}, Conscientiousness: {{}}
-            <br>
-            Persona: {{IDPersona}}
-            Advocate
-            Debater
-            Mediator
-            Consul
-            Executive
-            Adventurer
-            Logistician
-            Commander
-            Entrepreneur
-            Logician
-            Protagonist
-            Architect
-            Campaigner
-            Entertainer
-            Defender
-            Virtuoso
-            <br>
-            Alchemy Sentiment: {{ALSentimentScore}}
-            <br>
-            Alchemy Emotions:
-            Anger: {{ALEmotionsAngerScore}}
-            Disgust: {{ALEmotionsDisgustScore}}
-            Fear: {{ALEmotionsFearScore}}
-            Joy: {{ALEmotionsJoyScore}}
-            Sadness: {{ALEmotionsSadnessScore}}
-            <br>
-            Concepts (x5): {{ALConceptsText1}}, relevance: {{ALConceptsRelevance1}}
-            <br>
-            Entities (x5): {{ALEntitiesText1}}, relevance: {{ALEntitiesRelevance1}}, type: {{ALEntitiesType1}}, count: {{ALEntitiesCount1}}
-            <br>
-            Keywords (x5): {{ALKeywordsText1}}, relevance: {{ALKeywordsRelevance1}}
-            <br>
-            URL: {{ALUrl}}
-            <br>
-            Text: {{ALText}}
-            <br>
+        <!-- <div ng-controller="mainTextCtrl">
+ 
         </div> -->
 
         <!-- ANGULAR -->
@@ -116,14 +54,15 @@
         <script src="js/mainService.js"></script>
         <script src="directives/loginHeaderDir.js"></script>
         <script src="directives/loggedinHeaderDir.js"></script>
-        <script src="directives/displayConceptsDir.js"></script>
-        <script src="directives/displayEmotionDir.js"></script>
-        <script src="directives/displayEntitiesDir.js"></script>
-        <script src="directives/displayKeywordsDir.js"></script>
-        <script src="directives/displayPersonaDir.js"></script>
-        <script src="directives/displayPersonalityDir.js"></script>
-        <script src="directives/displayPoliticalDir.js"></script>
-        <script src="directives/displaySentimentDir.js"></script>
-        <script src="directives/displayToneDir.js"></script>      
+        <script src="directives/conceptsDir.js"></script>
+        <script src="directives/emotionDir.js"></script>
+        <script src="directives/entitiesDir.js"></script>
+        <script src="directives/keywordsDir.js"></script>
+        <script src="directives/personaDir.js"></script>
+        <script src="directives/personalityDir.js"></script>
+        <script src="directives/personalityInsightsDir.js"></script>
+        <script src="directives/politicalDir.js"></script>
+        <script src="directives/sentimentDir.js"></script>
+        <script src="directives/toneDir.js"></script>      
     </body>
 </html>

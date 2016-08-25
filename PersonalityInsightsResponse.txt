@@ -1,3 +1,231 @@
+
+/////////////////////////////////////////
+///////    VERY CLEAN RESPONSE    ///////
+/////////////////////////////////////////
+
+  tree
+    children
+      personality / Big 5
+          Openness_parent / Openness
+              Openness
+                  Adventurousness
+                  Artistic interests
+                  Emotionality
+                  Imagination
+                  Intellect
+                  Liberalism / Authority-challenging
+              Conscientiousness
+                  Achievement striving
+                  Cautiousness
+                  Dutifulness
+                  Orderliness
+                  Self-discipline
+                  Self-efficacy
+              Extraversion
+                  Activity level
+                  Assertiveness
+                  Cheerfulness
+                  Excitement-seeking
+                  Friendliness / Outgoing
+                  Gregariousness
+              Agreeableness
+                  Altruism
+                  Cooperation
+                  Modesty
+                  Morality / Uncompromising
+                  Sympathy
+                  Trust
+              Neuroticism / Emotional range
+                  Anger / Fiery
+                  Anxiety / Prone to worry
+                  Depression / Melancholy
+                  Immoderation
+                  Self-consciousness
+                  Vulnerability / Susceptible to stress
+      needs
+          Ideal_parent / Ideal
+              Challenge
+              Closeness
+              Curiosity
+              Excitement
+              Harmony
+              Ideal
+              Liberty
+              Love
+              Practicality
+              Self-expression
+              Stability
+              Structure
+      values
+          Conservation_parent / Conservation
+              Conservation
+              Openness to change
+              Hedonism
+              Self-enhancement
+              Self-transcendence
+
+/////////////////////////////////////////
+///////    CLEANED-UP RESPONSE    ///////
+/////////////////////////////////////////
+
+All from response.data....
+{
+  "tree": {
+    "children": [
+      { "id": "personality", "name": "Big 5",
+        "children": [
+          { "id": "Openness_parent", "name": "Openness",
+            "percentage": 0.8007321569358445,
+            "children": [
+              { "id": "Openness", "name": "Openness",
+                "percentage": 0.8007321569358445,
+                "children": [
+                  { "id": "Adventurousness", "name": "Adventurousness",
+                    "percentage": 0.8050998103846428, },
+                  { "id": "Artistic interests", "name": "Artistic interests",
+                    "percentage": 0.1066453268457474, },
+                  { "id": "Emotionality", "name": "Emotionality",
+                    "percentage": 0.16260633869561242, },
+                  { "id": "Imagination", "name": "Imagination",
+                    "percentage": 0.618530196532113, },
+                  { "id": "Intellect", "name": "Intellect",
+                    "percentage": 0.8162019629516665, },
+                  { "id": "Liberalism", "name": "Authority-challenging",
+                    "percentage": 0.8010618681236074, }
+                ]
+              },
+              { "id": "Conscientiousness", "name": "Conscientiousness",
+                "percentage": 0.6494340683012811,
+                "children": [
+                  { "id": "Achievement striving", "name": "Achievement striving",
+                    "percentage": 0.3688649812040568, },
+                  { "id": "Cautiousness", "name": "Cautiousness",
+                    "percentage": 0.7896382750976426, },
+                  { "id": "Dutifulness", "name": "Dutifulness",
+                    "percentage": 0.6638197982819379, },
+                  { "id": "Orderliness", "name": "Orderliness",
+                    "percentage": 0.3115155364825305, },
+                  { "id": "Self-discipline", "name": "Self-discipline",
+                    "percentage": 0.48602061544442365, },
+                  { "id": "Self-efficacy", "name": "Self-efficacy",
+                    "percentage": 0.7658203981466265, }
+                ]
+              },
+              { "id": "Extraversion", "name": "Extraversion",
+                "percentage": 0.27325175471594565,
+                "children": [
+                  { "id": "Activity level", "name": "Activity level",
+                    "percentage": 0.47845180518751407, },
+                  { "id": "Assertiveness", "name": "Assertiveness",
+                    "percentage": 0.47841439343940195, },
+                  { "id": "Cheerfulness", "name": "Cheerfulness",
+                    "percentage": 0.11977131555919782, },
+                  { "id": "Excitement-seeking", "name": "Excitement-seeking",
+                    "percentage": 0.07818487127910173, },
+                  { "id": "Friendliness", "name": "Outgoing",
+                    "percentage": 0.40711907962527993, },
+                  { "id": "Gregariousness", "name": "Gregariousness",
+                    "percentage": 0.19000682511206968, }
+                ]
+              },
+              { "id": "Agreeableness", "name": "Agreeableness",
+                "percentage": 0.5816287818463182,
+                "children": [
+                  { "id": "Altruism", "name": "Altruism",
+                    "percentage": 0.5718599449017044, },
+                  { "id": "Cooperation", "name": "Cooperation",
+                    "percentage": 0.7794530496101028, },
+                  { "id": "Modesty", "name": "Modesty",
+                    "percentage": 0.9130056612129964, },
+                  { "id": "Morality", "name": "Uncompromising",
+                    "percentage": 0.8214904559495187, },
+                  { "id": "Sympathy", "name": "Sympathy",
+                    "percentage": 0.8395994457982738, },
+                  { "id": "Trust", "name": "Trust",
+                    "percentage": 0.8516397002592041, }
+                ]
+              },
+              { "id": "Neuroticism", "name": "Emotional range",
+                "percentage": 0.3037259253609977,
+                "children": [
+                  { "id": "Anger", "name": "Fiery",
+                    "percentage": 0.2899516132750636, },
+                  { "id": "Anxiety", "name": "Prone to worry",
+                    "percentage": 0.1147796406025389, },
+                  { "id": "Depression", "name": "Melancholy",
+                    "percentage": 0.3213566377272857, },
+                  { "id": "Immoderation", "name": "Immoderation",
+                    "percentage": 0.18990198701382816, },
+                  { "id": "Self-consciousness", "name": "Self-consciousness",
+                    "percentage": 0.12539065375114195, },
+                  { "id": "Vulnerability", "name": "Susceptible to stress",
+                    "percentage": 0.1373029359302341, }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      { "id": "needs", "name": "Needs",
+        "children": [
+          { "id": "Ideal_parent", "name": "Ideal",
+            "percentage": 0.030918024149743307,
+            "children": [
+              { "id": "Challenge", "name": "Challenge",
+                "percentage": 0.047626509238788174, },
+              { "id": "Closeness", "name": "Closeness",
+                "percentage": 0.24830421042302744, },
+              { "id": "Curiosity", "name": "Curiosity",
+                "percentage": 0.31981219728920957, },
+              { "id": "Excitement", "name": "Excitement",
+                "percentage": 0.12461082654639197, },
+              { "id": "Harmony", "name": "Harmony",
+                "percentage": 0.783345535503745, },
+              { "id": "Ideal", "name": "Ideal",
+                "percentage": 0.030918024149743307, },
+              { "id": "Liberty", "name": "Liberty",
+                "percentage": 0.2508990775362041, },
+              { "id": "Love", "name": "Love",
+                "percentage": 0.6744270787113871, },
+              { "id": "Practicality", "name": "Practicality",
+                "percentage": 0.8652140633561836, },
+              { "id": "Self-expression", "name": "Self-expression",
+                "percentage": 0.17194214857464235, },
+              { "id": "Stability", "name": "Stability",
+                "percentage": 0.20253169982611385, },
+              { "id": "Structure", "name": "Structure",
+                "percentage": 0.12759690178235064, }
+            ]
+          }
+        ]
+      },
+      { "id": "values", "name": "Values",
+        "children": [
+          { "id": "Conservation_parent", "name": "Conservation",
+            "percentage": 0.10151979669773438,
+            "children": [
+              { "id": "Conservation", "name": "Conservation",
+                "percentage": 0.10151979669773438, },
+              { "id": "Openness to change", "name": "Openness to change",
+                "percentage": 0.6850454276597996, },
+              { "id": "Hedonism", "name": "Hedonism",
+                "percentage": 0.7939011617964679, },
+              { "id": "Self-enhancement", "name": "Self-enhancement",
+                "percentage": 0.6367286275298775, },
+              { "id": "Self-transcendence", "name": "Self-transcendence",
+                "percentage": 0.759649727410942, }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/////////////////////////////////////////
+//////////    FULL RESPONSE    //////////
+/////////////////////////////////////////
+
 All from response.data....
 {
   "id": "*UNKNOWN*",

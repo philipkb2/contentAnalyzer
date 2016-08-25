@@ -35,7 +35,8 @@ angular.module('textAnalyzer')
 				});
 				// PERSONALITY INSIGHTS
 				mainService.get_personality_insights(textToAnalyze).then(function(response){
-					$scope.personality_insights_response = response;
+					$scope.pi_response = response.tree.children;
+					$scope.pi_wordcount = response.word_count;
 				});
 			};
 		};

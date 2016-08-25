@@ -90,6 +90,10 @@
 								<display-personality personality-data="indc_response.personality"></display-personality>
 							</div>
 
+							<div role="tabpanel" class="personality-insights-data-cont tab-pane fade col-xs-12" ng-if="pi_response">
+								<display-personality-insights personality-insights-data="pi_response"></display-personality-insights>
+							</div>
+
 							<div role="tabpanel" class="political-data-cont tab-pane fade col-xs-12" ng-if="indc_response"><!-- ng-repeat="(key, val) in political" -->
 								<display-political political-data="indc_response.political"></display-political>
 							</div>
