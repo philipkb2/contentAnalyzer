@@ -26,9 +26,9 @@ app.use(bodyParser.json());
 // ======== ANALYSIS APIs ========
 // app.post('/api/getIndicoMultiText', indicoCtrl.GetIndicoMultiText);
 // app.post('/api/getIndicoPersonaText', indicoCtrl.GetIndicoPersonaText);
-app.post('/api/getAlchemyCombined', ibmAlCtrl.GetAlchemyCombined);
+// app.post('/api/getAlchemyCombined', ibmAlCtrl.GetAlchemyCombined);
 // app.post('/api/getToneAnalyzer', toneAnalyzerCtrl.GetToneAnalyzer);
-app.post('/api/getPersonalityInsights', ibmPICtrl.GetPersonalityInsights);
+// app.post('/api/getPersonalityInsights', ibmPICtrl.GetPersonalityInsights);
 
 // app.post('/api/createIndicoMultiText', indicoCtrl.CreateIndicoMultiText);
 // app.post('/api/createAlchemyCombined', ibmAlCtrl.CreateAlchemyCombined);

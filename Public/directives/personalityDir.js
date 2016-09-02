@@ -44,8 +44,7 @@ angular.module('textAnalyzer')
 						.staggerLabels(true)
 						//.staggerLabels(ID_PersonalityData[0].values.length > 8)
 						.showValues(true)
-						.duration(250)
-						;
+						.duration(250);
 
 					d3.select('#chartPersonality1 svg')
 						.datum(ID_PersonalityData)

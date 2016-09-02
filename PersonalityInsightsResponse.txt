@@ -5,6 +5,7 @@
 
   tree
     children
+    
       personality / Big 5
           Openness_parent / Openness
               Openness

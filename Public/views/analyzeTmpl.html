@@ -52,14 +52,15 @@
 						<h3 class="nav-left-panel-header">Analyses</h3>
 						<ul class="nav nav-pills nav-stacked" role="tablist">
 							<li role="presentation" class="active"><a href=".sentiment-data-cont" aria-controls="sentiment" role="tab" data-toggle="pill">Sentiment</a></li>
-							<li role="presentation"><a href=".emotion-data-cont" aria-controls="Emotion" role="tab" data-toggle="pill">Emotion</a></li>
-							<li role="presentation"><a href=".tone-data-cont" aria-controls="Concepts" role="tab" data-toggle="pill">Tone</a></li>
-							<li role="presentation"><a href=".personality-data-cont" aria-controls="Concepts" role="tab" data-toggle="pill">Personality</a></li>
-							<li role="presentation"><a href=".political-data-cont" aria-controls="Political" role="tab" data-toggle="pill">Political</a></li>
-							<li role="presentation"><a href=".keywords-data-cont" aria-controls="Keywords" role="tab" data-toggle="pill">Keywords</a></li>
-							<li role="presentation"><a href=".concepts-data-cont" aria-controls="Concepts" role="tab" data-toggle="pill">Concepts</a></li>
-							<li role="presentation"><a href=".entities-data-cont" aria-controls="Concepts" role="tab" data-toggle="pill">Entities</a></li>
-							<li role="presentation"><a href=".persona-data-cont" aria-controls="Persona" role="tab" data-toggle="pill">Persona</a></li>
+							<li role="presentation"><a href=".emotion-data-cont" aria-controls="emotion" role="tab" data-toggle="pill">Emotion</a></li>
+							<li role="presentation"><a href=".tone-data-cont" aria-controls="tone" role="tab" data-toggle="pill">Tone</a></li>
+							<li role="presentation"><a href=".personality-data-cont" aria-controls="personality" role="tab" data-toggle="pill">Personality</a></li>
+							<li role="presentation"><a href=".personality-insights-data-cont" aria-controls="personalityInsights" role="tab" data-toggle="pill">Personality Insights</a></li>
+							<li role="presentation"><a href=".political-data-cont" aria-controls="political" role="tab" data-toggle="pill">Political</a></li>
+							<li role="presentation"><a href=".keywords-data-cont" aria-controls="keywords" role="tab" data-toggle="pill">Keywords</a></li>
+							<li role="presentation"><a href=".concepts-data-cont" aria-controls="concepts" role="tab" data-toggle="pill">Concepts</a></li>
+							<li role="presentation"><a href=".entities-data-cont" aria-controls="entities" role="tab" data-toggle="pill">Entities</a></li>
+							<li role="presentation"><a href=".persona-data-cont" aria-controls="persona" role="tab" data-toggle="pill">Persona</a></li>
 						</ul>
 					</div>
 
@@ -71,7 +72,8 @@
 						<div class="results-content tab-content col-xs-12">
 						<!-- To understand TA results: http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tone-analyzer/understanding-tone.shtml -->
 
-							<div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="indc_response.sentimentHQ">
+							<div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="pi_response">
+							<!-- <div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="indc_response.sentimentHQ"> -->
 								<display-sentiment sentiment-data="indc_response.sentimentHQ"></display-sentiment>
 								{{indc_response.sentimentHQ}}<br>{{al_sentimentScore}}
 							</div>
