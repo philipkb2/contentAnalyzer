@@ -13,9 +13,9 @@ var toneAnalyzerCtrl = require('./controllers/ibmTA-Ctrl.js');
 var ibmPICtrl = require('./controllers/ibmPI-Ctrl.js');
 var keys = require('./keys.js');
 
-
 var isAuthed = function(req, res, next) {
   if (!req.isAuthenticated()) return res.status(401).send();
+  console.log(req.session);
   return next();
 };
 

@@ -1,3 +1,5 @@
+// To understand TA results: http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tone-analyzer/understanding-tone.shtml
+
 // var AlchemyAPI = require('alchemy-api');
 var watson = require('watson-developer-cloud');
 var keys = require('../keys.js');

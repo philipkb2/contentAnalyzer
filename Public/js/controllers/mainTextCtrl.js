@@ -15,11 +15,11 @@ angular.module('textAnalyzer')
 
 		$scope.getMultiText = function(textToAnalyze){
 			$scope.pi_response = true;
-			return $scope.pi_response;
-			// // ALCHEMY
-			// mainService.get_al_combinedText(textToAnalyze).then(function(response){
-			// 	$scope.al_response = response;
-			// });
+			// return $scope.pi_response;
+			// ALCHEMY
+			mainService.get_al_combinedText(textToAnalyze).then(function(response){
+				$scope.al_response = response;
+			});
 			// // INDICO
 			// mainService.get_indc_multiText(textToAnalyze).then(function(response){
 			// 	$scope.indc_response = response;

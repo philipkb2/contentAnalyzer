@@ -11,6 +11,7 @@ var Analysis = new mongoose.Schema({
 		ref: 'User'
 	},
 	title: String,
+	timestamps: true,	// http://mongoosejs.com/docs/guide.html#timestamps
 // INDICO - 7 features // https://indico.io/docs
 // 30 scores + 6 keywords & scores, 6 categories
 	indicoSentiment: Number,

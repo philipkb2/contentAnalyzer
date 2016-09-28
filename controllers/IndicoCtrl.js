@@ -56,7 +56,7 @@ module.exports = {
 
 
 // ============================================================
-// Indico.io docshttps://indico.io/docs#sentiment_hq
+// Indico.io docs https://indico.io/docs#sentiment_hq
 // Indico.io NODE PKG: https://www.npmjs.com/package/indico.io
 // 10,000 free API calls per month
 // ============================================================

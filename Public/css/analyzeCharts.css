@@ -5,9 +5,9 @@ html, body {
     width: 100%;
 }
 
-text {
+/*text {
     font: 12px sans-serif;
-}
+}*/
 
 svg {
     display: block;
@@ -96,4 +96,14 @@ svg {
     height: 400px !important;
     width: 500px !important;
     padding-left: 0 !important;
+}
+/*=======================================
+=== PERSONALITY INSIGHTS RADIAL CHART ===
+=======================================*/
+.radialHistogram text {
+    text-anchor: middle;
+}
+
+.radialHistogram path {
+    fill: none;
 }

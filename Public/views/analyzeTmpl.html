@@ -17,117 +17,127 @@
 	<div ng-controller="mainUrlCtrl" class="analyze-page-container container">
 		<div ng-controller="mainTextCtrl" class="row">
 
-			<div class="upload-container col-xs-12">
-				<br><br>
-				<h3 class="analyze-body-header">Analyze your text</h3>
+			<!-- <div ng-controller="navPanelTabs" class="analyze-results-container col-xs-12"> -->
 
-				<div class="text-submission">
-					<h4>Enter your text here:</h4>
-					<textarea rows="4" cols="50" ng-model="textToAnalyze"></textarea>
-					<button class="btn btn-primary btn-xs btn-data-submit btn-analyze-text" ng-click="getMultiText(textToAnalyze)">Analyze Text</button>
+				<div class="nav-left-container col-xs-2 sidebar">
+					<h3 class="nav-left-panel-header nav-left-panel-header-top">Analyze</h3>
+					<ul class="nav nav-pills nav-stacked" role="tablist">
+						<li role="presentation" class="active"><a href=".new-analyze-panel" aria-controls="new-analyze" role="tab" data-toggle="pill">New</a></li>
+						<li role="presentation"><a href=".current-analyze-panel" aria-controls="current-analyze" role="tab" data-toggle="pill">Current</a></li>
+						<li role="presentation"><a href=".past-analyze-panel" aria-controls="past-analyze" role="tab" data-toggle="pill">Past</a></li>
+						<div class="nav-panel-sep"></div>
+					</ul>
+					<h3 class="nav-left-panel-header nav-left-panel-header-bottom">Results</h3>
+					<ul class="nav nav-pills nav-stacked" role="tablist">
+						<li role="presentation" class="active"><a href=".sentiment-data-cont" aria-controls="sentiment" role="tab" data-toggle="pill">Sentiment</a></li>
+						<li role="presentation"><a href=".emotion-data-cont" aria-controls="emotion" role="tab" data-toggle="pill">Emotion</a></li>
+						<li role="presentation"><a href=".tone-data-cont" aria-controls="tone" role="tab" data-toggle="pill">Tone</a></li>
+						<li role="presentation"><a href=".personality-data-cont" aria-controls="personality" role="tab" data-toggle="pill">Personality</a></li>
+						<li role="presentation"><a href=".personality-insights-data-cont" aria-controls="personalityInsights" role="tab" data-toggle="pill">Personality Insights</a></li>
+						<li role="presentation"><a href=".personality-insights-rad-hist-data-cont" aria-controls="personalityInsightsRadHist" role="tab" data-toggle="pill">Personality Insights Radial Histogram</a></li>
+						<li role="presentation"><a href=".political-data-cont" aria-controls="political" role="tab" data-toggle="pill">Political</a></li>
+						<li role="presentation"><a href=".keywords-data-cont" aria-controls="keywords" role="tab" data-toggle="pill">Keywords</a></li>
+						<li role="presentation"><a href=".concepts-data-cont" aria-controls="concepts" role="tab" data-toggle="pill">Concepts</a></li>
+						<li role="presentation"><a href=".entities-data-cont" aria-controls="entities" role="tab" data-toggle="pill">Entities</a></li>
+						<li role="presentation"><a href=".persona-data-cont" aria-controls="persona" role="tab" data-toggle="pill">Persona</a></li>
+					</ul>
 				</div>
-				<br>
-				
-				<div class="url-submission">
-					<h4>Analyze a website:</h4>
-					<input type="text" value="" ng-model="urlToAnalyze">
-					<button class="btn btn-primary btn-xs btn-data-submit" ng-click="getMultiUrl(urlToAnalyze);">Analyze Website</button>
-				</div>
-				<br>
-				
-				<div class="file-submission">
-					<h4>Upload a file (.txt)</h4>
-					<input type="text" value="" ng-model="fileToAnalyze">
-					<button class="btn btn-primary btn-xs btn-data-submit">Choose file</button>
-					<button class="btn btn-primary btn-xs btn-data-submit" ng-click="getMultiText(fileToAnalyze)">Analyze</button>
-				</div>
-				<br>
-			</div>
 
-			<br>
-
-			<div ng-controller="navPanelTabs" class="analyze-results-container col-xs-12">
-
-					<div class="nav-left-panel col-xs-2 sidebar">
-						<h3 class="nav-left-panel-header">Analyses</h3>
-						<ul class="nav nav-pills nav-stacked" role="tablist">
-							<li role="presentation" class="active"><a href=".sentiment-data-cont" aria-controls="sentiment" role="tab" data-toggle="pill">Sentiment</a></li>
-							<li role="presentation"><a href=".emotion-data-cont" aria-controls="emotion" role="tab" data-toggle="pill">Emotion</a></li>
-							<li role="presentation"><a href=".tone-data-cont" aria-controls="tone" role="tab" data-toggle="pill">Tone</a></li>
-							<li role="presentation"><a href=".personality-data-cont" aria-controls="personality" role="tab" data-toggle="pill">Personality</a></li>
-							<li role="presentation"><a href=".personality-insights-data-cont" aria-controls="personalityInsights" role="tab" data-toggle="pill">Personality Insights</a></li>
-							<li role="presentation"><a href=".political-data-cont" aria-controls="political" role="tab" data-toggle="pill">Political</a></li>
-							<li role="presentation"><a href=".keywords-data-cont" aria-controls="keywords" role="tab" data-toggle="pill">Keywords</a></li>
-							<li role="presentation"><a href=".concepts-data-cont" aria-controls="concepts" role="tab" data-toggle="pill">Concepts</a></li>
-							<li role="presentation"><a href=".entities-data-cont" aria-controls="entities" role="tab" data-toggle="pill">Entities</a></li>
-							<li role="presentation"><a href=".persona-data-cont" aria-controls="persona" role="tab" data-toggle="pill">Persona</a></li>
-						</ul>
-					</div>
-
-<!--                     <div class="results-title-container col-xs-10">
-						<p class="results-title">TITLE</p>
-					</div> -->
-
-					<div class="results-panel-right col-xs-10">
-						<div class="results-content tab-content col-xs-12">
-						<!-- To understand TA results: http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tone-analyzer/understanding-tone.shtml -->
-
-							<div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="pi_response">
-							<!-- <div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="indc_response.sentimentHQ"> -->
-								<display-sentiment sentiment-data="indc_response.sentimentHQ"></display-sentiment>
-								{{indc_response.sentimentHQ}}<br>{{al_sentimentScore}}
+				<!-- <div class="results-title-container col-xs-10">
+					<p class="results-title">TITLE</p>
+				</div> -->
+				<div class="upload-container col-xs-10">
+					<div class="upload-panel tab-content well well-lg col-xs-12">
+						<div role="tabpanel" class="new-analyze-panel tab-pane fade in active col-xs-12">
+							<div class="text-submission">
+								<h4>Enter text here for analysis:</h4>
+								<textarea class="textarea-text" rows="3" cols="50" placeholder="Enter text to analyze" ng-model="textToAnalyze"></textarea>
+								<button class="btn btn-primary btn-xs btn-data-submit" id="btn-analyze-text" ng-click="getMultiText(textToAnalyze)">Analyze Text</button>
 							</div>
-
-							<div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="indc_response.emotion">
-								<display-emotion emotion-data="indc_response.emotion"></display-emotion>
-							<!-- ng-repeat="emotion in emotions" -->
-								<!-- Alchemy - <br>Anger: {{al_emotions.anger}}<br>Disgust: {{al_emotions.disgust}}<br>Fear: {{al_emotions.feat}}<br>Joy: {{al_emotions.joy}}<br>Sadness: {{al_emotions.sadness}}<br> -->
+							<div class="url-submission">
+								<h4>Analyze a website:</h4>
+								<input class="input-url" type="text" ng-model="urlToAnalyze">
+								<button class="btn btn-primary btn-xs btn-data-submit" id="btn-analyze-url" ng-click="getMultiUrl(urlToAnalyze);">Analyze Website</button>
 							</div>
-
-							<div role="tabpanel" class="tone-data-cont tab-pane fade col-xs-12" ng-if="ta_documentTone">
-								<display-tone tone-data="ta_documentTone"></display-tone>
+							<div class="file-submission">
+								<div class="file-submission-top">
+									<h4>Upload a file (.txt)</h4>
+									<input class="input-file" type="text" value="" ng-model="fileToAnalyze">
+								</div>
+								<div class="file-submission-bottom">
+									<button class="btn btn-primary btn-xs btn-data-submit" id="btn-upload-file">Choose File</button>
+									<button class="btn btn-primary btn-xs btn-data-submit" id="btn-analyze-file" ng-click="getMultiText(fileToAnalyze)">Analyze File</button>
+								</div>
 							</div>
-
-							<div role="tabpanel" class="personality-data-cont tab-pane fade col-xs-12" ng-if="indc_response.personality">
-								<display-personality personality-data="indc_response.personality"></display-personality>
+						</div>
+						<div role="tabpanel" class="current-analyze-panel tab-pane fade col-xs-12">
+							<h3>Analysis</h3>
+							<h4>Your analyzed text: "{{indc_response.word_count_message}}"</h4>
+							<h4>Your analyzed text: "{{indc_response.word_count}}"</h4>
+							<div class="pi-strength-bar" ng-if="pi_response">
+								<pi-strength-bar pi-strength-bar-data=""></pi-strength-bar>
 							</div>
-
-							<div role="tabpanel" class="personality-insights-data-cont tab-pane fade col-xs-12" ng-if="pi_response">
-								<display-personality-insights personality-insights-data="pi_response"></display-personality-insights>
-							</div>
-
-							<div role="tabpanel" class="political-data-cont tab-pane fade col-xs-12" ng-if="indc_response"><!-- ng-repeat="(key, val) in political" -->
-								<display-political political-data="indc_response.political"></display-political>
-							</div>
-
-							<div role="tabpanel" class="keywords-data-cont tab-pane fade col-xs-12">
-								<display-keywords keywords-data="indc_response.keywords"></display-keywords>
-								INDICO - <br>Keywords (x5): {{indc_response.keywords}}, relevance: {{}}
-							</div>
-
-							<div role="tabpanel" class="concepts-data-cont tab-pane fade col-xs-12" ng-repeat="concept in concepts">
-								<display-concepts concepts-data="indc_response.concepts"></display-concepts>
- 								Concepts (x5): {{indc_response.concepts[0].text}}, relevance: {{indc_response.concepts[0].relevance}}
-											<br>{{indc_response.concepts[1].text}}, relevance: {{indc_response.concepts[1].relevance}}
-											<br>{{indc_response.concepts[2].text}}, relevance: {{indc_response.concepts[2].relevance}}
-											<br>{{indc_response.concepts[3].text}}, relevance: {{indc_response.concepts[3].relevance}}
-											<br>{{indc_response.concepts[4].text}}, relevance: {{indc_response.concepts[4].relevance}}
-							</div>
-
-							<div role="tabpanel" class="entities-data-cont tab-pane fade col-xs-12" ng-repeat="entity in entities">
-								<display-entities entities-data="indc_response.entities"></display-entities>
-								Entities (x5):<br>{{indc_response.entity[0].text}}<br>relevance: {{indc_response.entity[0].relevance}}<br>type: {{indc_response.entity[0].type}}<br>count: {{indc_response.entity[0].count}}
-							</div>
-
-							<div role="tabpanel" class="persona-data-cont tab-pane fade col-xs-12" ng-if="indc_persona_response">
-								<display-persona persona-data="indc_response.persona"></display-persona>
-								{{indc_persona_response}}<br>Advocate<br>Debater<br>Mediator<br>Consul<br>Executive<br>Adventurer<br>Logistician<br>Commander<br>Entrepreneur<br>Logician<br>Protagonist<br>Architect<br>Campaigner<br>Entertainer<br>Defender<br>Virtuoso<br>
-							</div>
-
+							<!-- PI = minimum 100 words, should be 3500+, ideally 6000+....  -->
+						</div>
+						<div role="tabpanel" class="past-analyze-panel tab-pane fade col-xs-12">
+							<h4>Your saved analyses are:</h4>
 						</div>
 					</div>
+				</div>
 
-			</div>
+				<div class="results-container col-xs-10">
+					<div class="results-content tab-content well well-lg col-xs-12">
+
+						<div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="pi_response">
+						<!-- <div role="tabpanel" class="sentiment-data-cont tab-pane fade in active col-xs-12" ng-if="indc_response.sentimentHQ"> -->
+							<display-sentiment indc-sentiment-data="indc_response.sentimentHQ" al-sentiment-data="al_sentimentScore"></display-sentiment>
+						</div>
+						<div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="pi_response">
+						<!-- <div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="indc_response.emotion">							<div role="tabpanel" class="emotion-data-cont tab-pane fade col-xs-12" ng-if="indc_response.emotion"> -->
+							<display-emotion emotion-data="indc_response.emotion"></display-emotion>
+						<!-- ng-repeat="emotion in emotions" -->
+							<!-- Alchemy - <br>Anger: {{al_emotions.anger}}<br>Disgust: {{al_emotions.disgust}}<br>Fear: {{al_emotions.feat}}<br>Joy: {{al_emotions.joy}}<br>Sadness: {{al_emotions.sadness}}<br> -->
+						</div>
+						<div role="tabpanel" class="tone-data-cont tab-pane fade col-xs-12" ng-if="ta_documentTone">
+							<display-tone tone-data="ta_documentTone"></display-tone>
+						</div>
+						<div role="tabpanel" class="personality-data-cont tab-pane fade col-xs-12" ng-if="indc_response.personality">
+							<display-personality personality-data="indc_response.personality"></display-personality>
+						</div>
+						<div role="tabpanel" class="personality-insights-data-cont tab-pane fade col-xs-12" ng-if="pi_response">
+							<display-personality-insights personality-insights-data="pi_response"></display-personality-insights>
+						</div>
+						<div role="tabpanel" class="personality-insights-rad-hist-data-cont tab-pane fade col-xs-12" ng-if="pi_response">
+							<display-personality-insights-rad-hist personality-insights-rad-hist-data="pi_response"></display-personality-insights-rad-hist>
+						</div>
+						<div role="tabpanel" class="political-data-cont tab-pane fade col-xs-12" ng-if="indc_response"><!-- ng-repeat="(key, val) in political" -->
+							<display-political political-data="indc_response.political"></display-political>
+						</div>
+						<div role="tabpanel" class="keywords-data-cont tab-pane fade col-xs-12">
+							<display-keywords keywords-data="indc_response.keywords"></display-keywords>
+							INDICO - <br>Keywords (x5): {{indc_response.keywords}}, relevance: {{}}
+						</div>
+						<div role="tabpanel" class="concepts-data-cont tab-pane fade col-xs-12" ng-repeat="concept in concepts">
+							<display-concepts concepts-data="indc_response.concepts"></display-concepts>
+							Concepts (x5): {{indc_response.concepts[0].text}}, relevance: {{indc_response.concepts[0].relevance}}
+										<br>{{indc_response.concepts[1].text}}, relevance: {{indc_response.concepts[1].relevance}}
+										<br>{{indc_response.concepts[2].text}}, relevance: {{indc_response.concepts[2].relevance}}
+										<br>{{indc_response.concepts[3].text}}, relevance: {{indc_response.concepts[3].relevance}}
+										<br>{{indc_response.concepts[4].text}}, relevance: {{indc_response.concepts[4].relevance}}
+						</div>
+						<div role="tabpanel" class="entities-data-cont tab-pane fade col-xs-12" ng-repeat="entity in entities">
+							<display-entities entities-data="indc_response.entities"></display-entities>
+							Entities (x5):<br>{{indc_response.entity[0].text}}<br>relevance: {{indc_response.entity[0].relevance}}<br>type: {{indc_response.entity[0].type}}<br>count: {{indc_response.entity[0].count}}
+						</div>
+						<div role="tabpanel" class="persona-data-cont tab-pane fade col-xs-12" ng-if="indc_persona_response">
+							<display-persona persona-data="indc_response.persona"></display-persona>
+							{{indc_persona_response}}<br>Advocate<br>Debater<br>Mediator<br>Consul<br>Executive<br>Adventurer<br>Logistician<br>Commander<br>Entrepreneur<br>Logician<br>Protagonist<br>Architect<br>Campaigner<br>Entertainer<br>Defender<br>Virtuoso<br>
+						</div>
+
+					</div>
+				</div>
+
+			<!-- </div> -->
 
 			<div class="footer col-xs-12">
 				

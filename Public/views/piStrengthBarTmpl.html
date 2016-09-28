@@ -1,0 +1,6 @@
+<div class="pi-strength-bar" onload="init();" ng-if="pi_response">
+	<canvas id="pi-strength-bar-progress" width="670" height="161"></canvas>
+	<form id="draw-strength-bar-form">
+		<input id="pi-strength-bar-slider" type="range" min="0" max="100" onchange="drawImage();" onkeyup="drawImage();" />
+	</form>
+</div>
